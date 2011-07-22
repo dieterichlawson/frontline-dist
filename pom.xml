@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.frontlinesms.core</groupId>
 	<artifactId>frontlinesms-dist</artifactId>
-	<name>FrontlineSMS Desktop build</name>
+	<name>PatientView</name>
 	<description>This project allows packaging of separate modules of FrontlineSMS for distribution as a desktop application.</description>
 	<version>1.7.00-beta-6-SNAPSHOT</version>
 	<parent>
@@ -58,9 +58,9 @@
 				<artifactId>osxappbundle-maven-plugin</artifactId>
 				<version>1.0</version>
 				<configuration>
-					<bundleName>FrontlineSMS ${version}</bundleName>
+					<bundleName>PatientView</bundleName>
 					<mainClass>net.frontlinesms.DesktopLauncher</mainClass>
-					<iconFile>${basedir}/src/assemble/osx-resources/FrontlineSMS.icns</iconFile>
+					<iconFile>${basedir}/src/assemble/osx-resources/medic.icns</iconFile>
 					<jvmVersion>1.5+</jvmVersion>
 					<javaApplicationStub>${basedir}/src/assemble/osx-resources/JavaApplicationStub</javaApplicationStub>
 					<workingDirectory>$JAVAROOT/lib</workingDirectory>
@@ -104,7 +104,7 @@
 					<splashImage>src/assemble/resources/FrontlineSMS_Splash_Logo.jpg</splashImage>
 					<programIcon>src/assemble/resources/FrontlineSMS.ico</programIcon>
 					<javaMainClass>net.frontlinesms.DesktopLauncher</javaMainClass>
-					<programExecutableName>FrontlineSMS</programExecutableName>
+					<programExecutableName>PatientView</programExecutableName>
 					<programVendor>kiwanja.net</programVendor>
 					<packageContents>
 						<fileSet>
@@ -125,8 +125,8 @@
 							</excludes>
 						</fileSet>
 					</packageContents>
-					<programFilesHome>kiwanja.net/FrontlineSMS_${version}</programFilesHome>
-					<startMenuProgramFolderRoot>FrontlineSMS</startMenuProgramFolderRoot>
+					<programFilesHome>PatientView</programFilesHome>
+					<startMenuProgramFolderRoot>PatientView</startMenuProgramFolderRoot>
 					<compressionLevel>2</compressionLevel>
 					<!--<doCompile>false</doCompile>-->
 					<!--<doPack>false</doPack>-->
@@ -153,7 +153,7 @@
 		<dependency>
 			<groupId>net.frontlinesms.plugins</groupId>
 			<artifactId>frontlinesms-plugin-forms</artifactId>
-			<version>0.02.32</version>
+			<version>0.02.33-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.masabi.frontlinesms.plugins</groupId>
@@ -162,25 +162,10 @@
 		</dependency>
 		<dependency>
 			<groupId>net.frontlinesms.plugins</groupId>
-			<artifactId>frontlinesms-plugin-httptrigger</artifactId>
-			<version>0.01.25</version>
+			<artifactId>frontlinesms-plugin-patient-view</artifactId>
+			<version>0.9.0</version>
 		</dependency>
-		<dependency>
-			<groupId>net.frontlinesms.plugins</groupId>
-			<artifactId>frontlinesms-plugin-translation</artifactId>
-			<version>0.00.20</version>
-		</dependency>
-		<dependency>
-			<groupId>net.frontlinesms.plugins</groupId>
-			<artifactId>frontlinesms-plugin-reminders</artifactId>
-			<version>0.01.13</version>
-		</dependency>
-		<dependency>
-			<groupId>net.frontlinesms.plugins</groupId>
-			<artifactId>frontlinesms-plugin-sync</artifactId>
-			<version>0.0.1</version>
-		</dependency>
-		
+				
 		<!-- SMS Internet Services -->
 		<dependency>
 			<groupId>com.skebby.gateways</groupId>
